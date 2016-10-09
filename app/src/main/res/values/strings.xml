@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CardReader</string>
+    <string name="name">Name</string>
+    <string name="card_number">Card Number</string>
+    <string name="mmyy">mm/yy</string>
+    <string name="cvv">CVV</string>
+    <string name="process">Process to checkout</string>
+</resources>

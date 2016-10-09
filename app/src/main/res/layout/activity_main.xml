@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.santiago.cardreader.MainActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:elevation="9dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp">
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/scan"
+        android:tint="@android:color/white"/>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include
+        android:id="@+id/header_layout"
+        layout="@layout/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"></include>
+
+    <TextView
+        android:textColor="@android:color/black"
+        android:layout_below="@id/header_layout"
+        android:id="@+id/CreditCardTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18sp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="Credit Card"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_name"
+        android:layout_below="@+id/CreditCardTxt"
+        style="@style/inputs_pay"
+        >
+        <EditText
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:hint="@string/name"
+            android:textSize="18sp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_card_number"
+        android:layout_below="@+id/input_layout_name"
+        style="@style/inputs_pay"
+        >
+        <EditText
+            android:id="@+id/card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:hint="@string/card_number"
+            android:textSize="18sp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/conteiner_mm_cvv"
+        android:layout_below="@id/input_layout_card_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_mm_yy"
+            style="@style/inputs_pay"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            >
+            <EditText
+                android:id="@+id/mm_yy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:hint="@string/mmyy"
+                android:textSize="18sp"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_cvv"
+            style="@style/inputs_pay"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            >
+            <EditText
+                android:id="@+id/cvv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:hint="@string/cvv"
+                android:textSize="18sp"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/conteiner_mm_cvv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Process to checkout"/>
+
+</RelativeLayout>
